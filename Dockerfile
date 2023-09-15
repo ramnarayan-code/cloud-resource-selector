@@ -14,19 +14,10 @@ RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
 
 ENV MAVEN_HOME /usr/share/maven
 ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
-
-# # Define working directory.
-# WORKDIR /data
-#
-# # Define commonly used JAVA_HOME variable
-# ENV JAVA_HOME /usr/lib/jvm/default-jvm/
-
 ENV HOME=/usr/app
 
 RUN mkdir -p $HOME
-
 WORKDIR $HOME
-
 ADD . $HOME
 
 RUN mvn package

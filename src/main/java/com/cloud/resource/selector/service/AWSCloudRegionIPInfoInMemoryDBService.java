@@ -8,6 +8,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -15,6 +16,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 @Service
@@ -44,6 +46,12 @@ public class AWSCloudRegionIPInfoInMemoryDBService {
         }
     }
 
+    @Scheduled(fixedDelay = 5, initialDelay = 10, timeUnit = TimeUnit.MINUTES)
+    public void scheduledLoadRegionIPRanges() {
+        LOG.info("Scheduled loading of AWS Cloud Region based IP ranges Map started...");
+        loadRegionIPRanges();
+        LOG.info("Scheduled loading of AWS Cloud Region based IP ranges Map completed...");
+    }
 
     public void loadRegionIPRanges() {
         cloudAllRegionIPInfoMap = new HashMap<>();
