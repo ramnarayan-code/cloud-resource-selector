@@ -3,7 +3,6 @@ package com.cloud.resource.selector.service;
 import com.cloud.resource.selector.config.AWSCloudConfiguration;
 import com.cloud.resource.selector.exception.RegionNotFoundException;
 import com.cloud.resource.selector.model.CloudRegionIPInfo;
-import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,18 +20,14 @@ public class AWSCloudIPRangeSelectorService implements CloudIPRangeSelectorServi
 
     @Autowired
     private AWSCloudRegionIPInfoInMemoryDBService awsCloudRegionIPInfoInMemoryDBService;
-    
+
     @Autowired
     private AWSCloudConfiguration awsCloudConfiguration;
 
-
-    @PostConstruct
-    private void init() {
-        LOG.info("Initial loading of AWS Cloud Region based IP ranges Map started...");
-        awsCloudRegionIPInfoInMemoryDBService.loadRegionIPRanges(false);
-        LOG.info("Initial loading of AWS Cloud Region based IP ranges Map completed...");
+    public AWSCloudIPRangeSelectorService(AWSCloudRegionIPInfoInMemoryDBService awsCloudRegionIPInfoInMemoryDBService, AWSCloudConfiguration awsCloudConfiguration) {
+        this.awsCloudRegionIPInfoInMemoryDBService = awsCloudRegionIPInfoInMemoryDBService;
+        this.awsCloudConfiguration = awsCloudConfiguration;
     }
-
 
     @Override
     public List<CloudRegionIPInfo> getAllRegionIPRanges() {
@@ -45,6 +40,7 @@ public class AWSCloudIPRangeSelectorService implements CloudIPRangeSelectorServi
     @Override
     public List<CloudRegionIPInfo> getRegionSpecificIPRanges(String region) throws RegionNotFoundException {
         Map<String, List<CloudRegionIPInfo>> cloudAllRegionIPInfoMap = awsCloudRegionIPInfoInMemoryDBService.getCloudAllRegionIPInfoMap();
+        region = region.toLowerCase();
         if (cloudAllRegionIPInfoMap.containsKey(region)) {
             return cloudAllRegionIPInfoMap.get(region);
         } else {

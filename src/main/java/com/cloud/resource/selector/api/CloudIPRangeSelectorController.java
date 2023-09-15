@@ -23,8 +23,7 @@ public class CloudIPRangeSelectorController {
     @GetMapping(value = "/ip-ranges", produces = "text/plain")
     public String getRegionBasedIPRanges(@RequestParam String region) {
         List<CloudRegionIPInfo> cloudRegionIPInfoList;
-        region = region.toLowerCase();
-        cloudRegionIPInfoList = region.equals("all") ? cloudIPRangeSelectorService.getAllRegionIPRanges() : cloudIPRangeSelectorService.getRegionSpecificIPRanges(region);
+        cloudRegionIPInfoList = region.equalsIgnoreCase("all") ? cloudIPRangeSelectorService.getAllRegionIPRanges() : cloudIPRangeSelectorService.getRegionSpecificIPRanges(region);
         return cloudRegionIPInfoList != null ? cloudRegionIPInfoList.toString() : null;
     }
 }
