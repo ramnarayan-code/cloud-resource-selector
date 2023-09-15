@@ -35,6 +35,6 @@ public class ConfigurationValueLoadTest {
 
     @Test
     public void testValidRegionsWithValidValues() {
-        assertEquals(Arrays.asList("EU", "US", "AP", "CN", "SA", "AF", "CA"), validRegions);
+        assertEquals(Arrays.asList("EU", "US", "AP", "CN", "SA", "AF", "CA", "GLOBAL"), validRegions);
     }
 }
