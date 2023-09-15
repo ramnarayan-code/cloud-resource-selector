@@ -5,6 +5,9 @@ import com.cloud.resource.selector.model.CloudRegionIPInfo;
 
 import java.util.List;
 
+/*
+ Interface for cloud provider based sub-classes to implement the retrieval of IP Ranges
+ */
 public interface CloudIPRangeSelectorService {
     List<CloudRegionIPInfo> getAllRegionIPRanges();
 

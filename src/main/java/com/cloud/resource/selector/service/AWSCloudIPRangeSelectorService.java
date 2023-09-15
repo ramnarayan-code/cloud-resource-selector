@@ -3,6 +3,7 @@ package com.cloud.resource.selector.service;
 import com.cloud.resource.selector.config.AWSCloudConfiguration;
 import com.cloud.resource.selector.exception.RegionNotFoundException;
 import com.cloud.resource.selector.model.CloudRegionIPInfo;
+import com.cloud.resource.selector.model.CloudRegionIPList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,7 +32,7 @@ public class AWSCloudIPRangeSelectorService implements CloudIPRangeSelectorServi
 
     @Override
     public List<CloudRegionIPInfo> getAllRegionIPRanges() {
-        List<CloudRegionIPInfo> allCloudRegionIPInfoList = new ArrayList<>();
+        List<CloudRegionIPInfo> allCloudRegionIPInfoList = new CloudRegionIPList<>();
         Map<String, List<CloudRegionIPInfo>> cloudAllRegionIPInfoMap = awsCloudRegionIPInfoInMemoryDBService.getCloudAllRegionIPInfoMap();
         awsCloudConfiguration.getValidRegions().forEach(region -> allCloudRegionIPInfoList.addAll(cloudAllRegionIPInfoMap.get(region)));
         return allCloudRegionIPInfoList;
