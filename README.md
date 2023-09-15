@@ -2,6 +2,7 @@
 ## Tech Stack
 - Java 17
 - Spring boot v3.1.3
+- Docker
 
 ## Features
 - AWS Region IP-Range info persisted in the memory
