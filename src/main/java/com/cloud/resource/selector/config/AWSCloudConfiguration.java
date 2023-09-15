@@ -7,6 +7,10 @@ import org.springframework.context.annotation.Configuration;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+  AWSCloudConfiguration loads AWS based Datasource URL and Valid Region from
+  external config file "application.properties" file
+ */
 @Configuration
 public class AWSCloudConfiguration {
     @Value("${awsDatasourceURL}")

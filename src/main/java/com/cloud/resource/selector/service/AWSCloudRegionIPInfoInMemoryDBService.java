@@ -19,6 +19,9 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
+/*
+ AWSCloudRegionIPInfoInMemoryDBService provides the in-memory persistence of AWS Region IP-Range information
+ */
 @Service
 public class AWSCloudRegionIPInfoInMemoryDBService {
 
@@ -36,6 +39,9 @@ public class AWSCloudRegionIPInfoInMemoryDBService {
 
     private static Map<String, List<CloudRegionIPInfo>> cloudAllRegionIPInfoMap;
 
+    /*
+     Initial loading in the in-memory persistence
+     */
     @PostConstruct
     private void init() {
         boolean isTestProfile = Arrays.stream(this.environment.getActiveProfiles()).anyMatch(record -> record.equals("test"));
@@ -46,6 +52,9 @@ public class AWSCloudRegionIPInfoInMemoryDBService {
         }
     }
 
+    /*
+      Scheduled update in the in-memory persistence
+     */
     @Scheduled(fixedDelay = 5, initialDelay = 10, timeUnit = TimeUnit.MINUTES)
     public void scheduledLoadRegionIPRanges() {
         LOG.info("Scheduled loading of AWS Cloud Region based IP ranges Map started...");

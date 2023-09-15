@@ -11,9 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+/*
+  AWSCloudIPRangeSelectorController exposes the API endpoints
+  to fetch the AWS Region based IP ranges
+ */
 @RestController
 @RequestMapping("api/aws/")
-public class CloudIPRangeSelectorController {
+public class AWSCloudIPRangeSelectorController {
 
     @Autowired
     @Qualifier("aws-ipranges-selector-service")

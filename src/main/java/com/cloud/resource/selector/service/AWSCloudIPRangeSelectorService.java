@@ -12,6 +12,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
+
+/*
+ AWSCloudIPRangeSelectorService implementing the retrieval of all IP Ranges and \
+ valid region-based IP ranges
+ */
 @Service("aws-ipranges-selector-service")
 public class AWSCloudIPRangeSelectorService implements CloudIPRangeSelectorService {
 

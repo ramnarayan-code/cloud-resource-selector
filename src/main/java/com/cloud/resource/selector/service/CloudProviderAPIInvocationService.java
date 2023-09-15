@@ -8,6 +8,9 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
+/*
+ HTTP Client to invoke cloud provider API
+ */
 @Service
 public class CloudProviderAPIInvocationService {
 
