@@ -1,0 +1,12 @@
+name: Actions Pipeline
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  run-unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
