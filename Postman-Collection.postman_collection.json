@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "2337d62b-e377-4e8d-ac6f-41187c5a7653",
+		"name": "Postman-Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29763957"
+	},
+	"item": [
+		{
+			"name": "Region:ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/aws/ip-ranges?region=ALL",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"aws",
+						"ip-ranges"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "ALL"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region:EU",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/aws/ip-ranges?region=all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"aws",
+						"ip-ranges"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region:US",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/aws/ip-ranges?region=all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"aws",
+						"ip-ranges"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region:AP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/aws/ip-ranges?region=AP",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"aws",
+						"ip-ranges"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "AP"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region:CN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/aws/ip-ranges?region=all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"aws",
+						"ip-ranges"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region:SA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/aws/ip-ranges?region=all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"aws",
+						"ip-ranges"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region:AF",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/aws/ip-ranges?region=all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"aws",
+						"ip-ranges"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region:CA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/aws/ip-ranges?region=all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"aws",
+						"ip-ranges"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region:GLOBAL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/aws/ip-ranges?region=all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"aws",
+						"ip-ranges"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region:not found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/aws/ip-ranges?region=not-found",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"aws",
+						"ip-ranges"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "not-found"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
