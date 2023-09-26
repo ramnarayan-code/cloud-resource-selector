@@ -2,6 +2,7 @@
 ## Tech Stack
 - Java 17
 - Spring boot v3.1.3
+- Docker
 
 ## Features
 - AWS Region IP-Range info persisted in the memory
@@ -20,3 +21,7 @@ cloud platform based IP Range selectors
   Unit test report link:
   https://github.com/ramnarayan-code/cloud-resource-selector/actions/runs/6198694617/job/16829815842
 - Postman collection to find all the REST API endpoints
+
+https://github.com/ramnarayan-code/cloud-resource-selector/blob/main/Postman-Collection.postman_collection.json
+
+
