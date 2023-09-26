@@ -107,9 +107,7 @@ class AWSCloudIPRangeSelectorServiceTest {
                 """);
         when(awsCloudConfiguration.getValidRegions()).thenReturn(List.of("eu", "us", "ap", "cn", "sa", "af", "ca", "global"));
         awsCloudRegionIPInfoInMemoryDBService.loadRegionIPRanges();
-        AWSCloudRegionIPInfoInMemoryDBService awsCloudRegionIPInfoInMemoryDBMockService = mock(AWSCloudRegionIPInfoInMemoryDBService.class);
-        when(awsCloudRegionIPInfoInMemoryDBMockService.getCloudAllRegionIPInfoMap()).thenReturn(awsCloudRegionIPInfoInMemoryDBService.getCloudAllRegionIPInfoMap());
-        awsCloudIPRangeSelectorService = new AWSCloudIPRangeSelectorService(awsCloudRegionIPInfoInMemoryDBMockService, awsCloudConfiguration);
+        awsCloudIPRangeSelectorService = new AWSCloudIPRangeSelectorService(awsCloudRegionIPInfoInMemoryDBService, awsCloudConfiguration);
     }
 
 
